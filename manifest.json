@@ -1,8 +1,13 @@
 {
   "manifest_version": 3,
   "name": "MX Master Horizontal Video Scrubber",
-  "version": "1.0",
+  "version": "1.3",
   "description": "Scrub through any HTML5 video timeline using your horizontal scroll wheel.",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_title": "MX Scrubber — click to open settings"
+  },
+  "background": { "service_worker": "background.js" },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
